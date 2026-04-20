@@ -1,0 +1,192 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 25%),
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.08), transparent 20%),
+    rgba(255, 255, 255, 0.85);
+
+  backdrop-filter: blur(6px);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #94a3b8 transparent;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.student-workspace {
+  --student-bg:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 25%),
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.08), transparent 22%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(240, 249, 255, 0.9));
+  background: var(--student-bg);
+}
+
+.student-workspace[data-theme="dark"] {
+  --student-bg:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.2), transparent 28%),
+    radial-gradient(circle at top right, rgba(14, 165, 233, 0.16), transparent 24%),
+    linear-gradient(180deg, #07111f 0%, #0f172a 55%, #13213a 100%);
+  --student-surface: rgba(15, 23, 42, 0.92);
+  --student-surface-strong: rgba(19, 33, 58, 0.96);
+  --student-surface-muted: rgba(30, 41, 59, 0.88);
+  --student-surface-soft: rgba(14, 116, 144, 0.2);
+  --student-surface-soft-strong: rgba(14, 165, 233, 0.28);
+  --student-border: rgba(125, 211, 252, 0.2);
+  --student-border-strong: rgba(148, 163, 184, 0.28);
+  --student-text: #e2e8f0;
+  --student-text-muted: #cbd5e1;
+  --student-text-soft: #94a3b8;
+  --student-accent: #7dd3fc;
+  --student-accent-strong: #38bdf8;
+  --student-action: #0ea5e9;
+  --student-action-hover: #38bdf8;
+  background: var(--student-bg);
+  color: var(--student-text);
+}
+
+.student-workspace[data-theme="dark"] ::selection {
+  background: rgba(56, 189, 248, 0.35);
+  color: #f8fafc;
+}
+
+.student-workspace[data-theme="dark"] [class~="bg-white"] {
+  background-color: var(--student-surface) !important;
+}
+
+.student-workspace[data-theme="dark"] [class~="bg-white/80"],
+.student-workspace[data-theme="dark"] [class~="bg-white/90"] {
+  background-color: rgba(15, 23, 42, 0.84) !important;
+}
+
+.student-workspace[data-theme="dark"] [class~="bg-slate-50"],
+.student-workspace[data-theme="dark"] [class~="bg-slate-50/70"],
+.student-workspace[data-theme="dark"] [class~="bg-slate-50/80"],
+.student-workspace[data-theme="dark"] [class~="bg-slate-100"] {
+  background-color: var(--student-surface-muted) !important;
+}
+
+.student-workspace[data-theme="dark"] [class~="bg-sky-50"],
+.student-workspace[data-theme="dark"] [class~="bg-sky-50/40"],
+.student-workspace[data-theme="dark"] [class~="bg-sky-50/60"],
+.student-workspace[data-theme="dark"] [class~="bg-sky-50/70"],
+.student-workspace[data-theme="dark"] [class~="bg-sky-100"] {
+  background-color: var(--student-surface-soft) !important;
+}
+
+.student-workspace[data-theme="dark"] [class~="bg-slate-900"] {
+  background-color: var(--student-action) !important;
+}
+
+.student-workspace[data-theme="dark"] [class~="bg-slate-700"] {
+  background-color: var(--student-action-hover) !important;
+}
+
+.student-workspace[data-theme="dark"] [class~="border-sky-100"],
+.student-workspace[data-theme="dark"] [class~="border-sky-200"] {
+  border-color: var(--student-border) !important;
+}
+
+.student-workspace[data-theme="dark"] [class~="border-slate-100"],
+.student-workspace[data-theme="dark"] [class~="border-slate-200"],
+.student-workspace[data-theme="dark"] [class~="border-slate-300"] {
+  border-color: var(--student-border-strong) !important;
+}
+
+.student-workspace[data-theme="dark"] [class~="border-slate-900"] {
+  border-color: var(--student-action) !important;
+}
+
+.student-workspace[data-theme="dark"] [class~="text-slate-900"],
+.student-workspace[data-theme="dark"] [class~="text-slate-800"] {
+  color: var(--student-text) !important;
+}
+
+.student-workspace[data-theme="dark"] [class~="text-slate-700"],
+.student-workspace[data-theme="dark"] [class~="text-slate-600"] {
+  color: var(--student-text-muted) !important;
+}
+
+.student-workspace[data-theme="dark"] [class~="text-slate-500"],
+.student-workspace[data-theme="dark"] [class~="text-slate-400"],
+.student-workspace[data-theme="dark"] [class~="text-slate-300"] {
+  color: var(--student-text-soft) !important;
+}
+
+.student-workspace[data-theme="dark"] [class~="text-sky-700"],
+.student-workspace[data-theme="dark"] [class~="text-sky-600"] {
+  color: var(--student-accent) !important;
+}
+
+.student-workspace[data-theme="dark"] [class~="hover:bg-sky-50"]:hover,
+.student-workspace[data-theme="dark"] [class~="hover:bg-sky-50/50"]:hover,
+.student-workspace[data-theme="dark"] [class~="hover:bg-sky-50/60"]:hover,
+.student-workspace[data-theme="dark"] [class~="hover:bg-sky-100"]:hover,
+.student-workspace[data-theme="dark"] [class~="hover:bg-sky-100/70"]:hover {
+  background-color: var(--student-surface-soft-strong) !important;
+}
+
+.student-workspace[data-theme="dark"] [class~="hover:bg-slate-50"]:hover,
+.student-workspace[data-theme="dark"] [class~="hover:bg-slate-100"]:hover {
+  background-color: var(--student-surface-muted) !important;
+}
+
+.student-workspace[data-theme="dark"] [class~="hover:bg-rose-50"]:hover {
+  background-color: rgba(190, 24, 93, 0.16) !important;
+}
+
+.student-workspace[data-theme="dark"] [class~="hover:bg-slate-700"]:hover {
+  background-color: var(--student-action-hover) !important;
+}
+
+.student-workspace[data-theme="dark"] [class~="hover:border-sky-200"]:hover,
+.student-workspace[data-theme="dark"] [class~="focus-within:border-sky-200"]:focus-within {
+  border-color: rgba(125, 211, 252, 0.38) !important;
+}
+
+.student-workspace[data-theme="dark"] [class~="focus-within:bg-white"]:focus-within {
+  background-color: rgba(15, 23, 42, 0.96) !important;
+}
+
+.student-workspace[data-theme="dark"] input,
+.student-workspace[data-theme="dark"] select,
+.student-workspace[data-theme="dark"] textarea {
+  color: var(--student-text);
+}
+
+.student-workspace[data-theme="dark"] select option {
+  background-color: #0f172a;
+  color: var(--student-text);
+}
+
+.student-workspace[data-theme="dark"] input::placeholder,
+.student-workspace[data-theme="dark"] textarea::placeholder {
+  color: var(--student-text-soft);
+}
+
+.student-workspace[data-theme="dark"] * {
+  scrollbar-color: rgba(125, 211, 252, 0.45) transparent;
+}
