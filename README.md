@@ -4,11 +4,13 @@ A full-stack Learning Management System with role-based dashboards for Admin, In
 📸 Preview
 
 <p align="center">  
+   <img src="./screenshots/landing.png" width="80%" />
+  <img src="./screenshots/login.png" width="80%" />
   <img src="./screenshots/admindashboard.png" width="80%" />  
    <img src="./screenshots/instructordashboard.png" width="80%" />  
    <img src="./screenshots/studentdashboard.png" width="80%" />  
    <img src="./screenshots/studentworkspace.png" width="80%" />  
-   <img src="./screenshots/landing.png" width="80%" /> 
+ 
 </p>
 
 ✨ Features
