@@ -7,4 +7,5 @@ config.connectDB();
 
 app.listen(port, () => {
   console.log(`Server running in ${nodeEnv} mode on port ${port}`);
+  
 });

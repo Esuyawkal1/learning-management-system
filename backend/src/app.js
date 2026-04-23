@@ -1,6 +1,4 @@
 
-//backend/src/app.js
-
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
@@ -14,7 +12,7 @@ import { notFound } from "./middlewares/notFound.middleware.js";
 const app = express();
 
 /**
- * ================= CORS CONFIGURATION =================
+ *  CORS CONFIGURATION
  * Allows frontend to send cookies (authentication)
  */
 app.use(
@@ -25,7 +23,7 @@ app.use(
 );
 
 /**
- * ================= MIDDLEWARE =================
+ * MIDDLEWARE 
  */
 
 // Parse JSON request body
@@ -36,16 +34,22 @@ app.use(cookieParser());
 
 // Serve uploaded lesson assets through a public URL.
 app.use("/uploads", express.static(path.resolve("uploads")));
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: "Backend is running successfully!"
+  });
+})
 
 /**
- * ================= API ROUTES =================
+ * API ROUTES 
  */
 
 app.use("/api/payment", paymentRoutes);
 app.use("/api/v1", routes);
 
 /**
- * ================= ERROR HANDLING =================
+ *  ERROR HANDLING 
  */
 
 // 404 handler

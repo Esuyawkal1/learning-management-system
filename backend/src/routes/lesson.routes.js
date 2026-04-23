@@ -6,15 +6,7 @@ import { authorize } from "../middlewares/role.middleware.js";
 
 const router = Router({ mergeParams: true });
 
-/**
- * Public – Get all lessons of a course
- * GET /api/v1/courses/:courseId/lessons
- */
 
-/**
- * Instructor / Admin – Create lesson
- * POST /api/v1/courses/:courseId/lessons
- */
 router.get("/", protect, lessonController.getLessons);
 router.post(
   "/",

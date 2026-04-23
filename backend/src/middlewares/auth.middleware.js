@@ -1,4 +1,4 @@
-// src/middlewares/auth.middleware.js
+
 import { AppError } from "../utils/AppError.js";
 
 export const restrictTo = (...roles) => {

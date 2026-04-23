@@ -17,14 +17,14 @@ const respondWithSession = (res, { user, token }, message, status = 200) => {
   );
 };
 
-// ================= REGISTER =================
+// REGISTER
 export const register = asyncHandler(async (req, res) => {
   const result = await authService.register(req.body);
 
   return respondWithSession(res, result, "Registration successful", 201);
 });
 
-// ================= LOGIN =================
+//  LOGIN 
 export const login = asyncHandler(async (req, res) => {
   const result = await authService.login(req.body);
 
@@ -83,7 +83,7 @@ export const getGoogleClientConfig = asyncHandler(async (req, res) => {
   );
 });
 
-// ================= GET CURRENT USER =================
+//  GET CURRENT USER 
 export const getCurrentUser = asyncHandler(async (req, res) => {
   const user = await authService.getCurrentUser(req.user.id);
 
@@ -94,7 +94,7 @@ export const getCurrentUser = asyncHandler(async (req, res) => {
   );
 });
 
-// ================= LOGOUT =================
+//  LOGOUT 
 export const logout = asyncHandler(async (req, res) => {
   res.cookie("token", "", {
     httpOnly: true,

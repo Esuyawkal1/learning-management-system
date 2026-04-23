@@ -1,4 +1,3 @@
-// src/routes/enrollment.routes.js
 
 import { Router } from "express";
 import * as enrollmentController from "../controllers/enrollment.controller.js";
