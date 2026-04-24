@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import Hero from "@/components/landing/Hero";
 import FeaturedCourses from "@/components/landing/FeaturedCourses";
 import Categories from "@/components/landing/Categories";
