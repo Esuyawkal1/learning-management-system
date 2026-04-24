@@ -14,9 +14,15 @@ export const env = {
   chapaReturnUrl:
     process.env.CHAPA_RETURN_URL ||
     process.env.PAYMENT_RETURN_URL ||
-    "http://localhost:3000/payment/verify",
+    "https://frontend-deploy-hp0lvs92o-esuyawkal.vercel.app/payment/verify",
   chapaCallbackUrl:
     process.env.CHAPA_CALLBACK_URL ||
     process.env.PAYMENT_CALLBACK_URL ||
-    "http://localhost:5000/api/payment/verify",
+    "https://tech-folders-backend.onrender.com/api/v1/payment/verify",
+
+  clientUrl:
+    process.env.CLIENT_URL ||
+    "https://frontend-deploy-hp0lvs92o-esuyawkal.vercel.app",
+
+
 };

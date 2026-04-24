@@ -17,7 +17,7 @@ const app = express();
  */
 app.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://frontend-deploy-hp0lvs92o-esuyawkal.vercel.app',
     credentials: true,
   })
 );
