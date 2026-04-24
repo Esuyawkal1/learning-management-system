@@ -1,4 +1,4 @@
-# learning-management-system
+# learning-management-system(Tech-Folders)
 A full-stack Learning Management System with role-based dashboards for Admin, Instructor, and Students.
 
 📸 Preview
