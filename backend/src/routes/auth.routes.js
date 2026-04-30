@@ -18,9 +18,7 @@ router.post("/reset-password", authController.resetPassword);
 router.post("/google", authController.googleAuth);
 router.post("/logout", authController.logout);
 
-// Protected routes (example: get current user's profile)
+// Protected routes 
 router.get("/me", protect, authController.getCurrentUser);
-// Admin-only routes example
-// router.get("/all-users", protect, restrictTo("admin"), authController.getAllUsers);
 
 export default router;
